@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ce66427b4f6424f9d508e85bc4c935, type: 3}
+  m_Name: RationalFisherProfile
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 4308147666319785372, guid: 1f65aa7ae7c5fde4eb577ccfc001b19c, type: 3}
+    - {fileID: 11400000, guid: 505b11565e4cccf47991651a99125abe, type: 2}
+    - {fileID: 11400000, guid: f21cf7b19bb9f4c479da9c9f353eebe9, type: 2}
+    - {fileID: 11400000, guid: 1c6c1130ada3962438f486778b459ed2, type: 2}
+    - {fileID: 11400000, guid: 41d2cf789fe495f49a4dcaa661d6876e, type: 2}
+    - {fileID: 11400000, guid: f28d788d2f3ab56418b55e7796d9bae9, type: 2}
+    - {fileID: 11400000, guid: 470242f0f841e5340869e9e301018fd0, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: components
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[IComponent, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 1|GeneralComponents.Prefab, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Entities
+    - Name: list
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Helpers.ActionListComponent, Assembly-CSharp
+    - Name: list
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[MAction, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Helpers.GoalListComponent, Assembly-CSharp
+    - Name: list
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[MGoal, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Helpers.NormListComponent, Assembly-CSharp
+    - Name: list
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[MNorm, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  entityName: RationalFisherProfile
+  ID: 

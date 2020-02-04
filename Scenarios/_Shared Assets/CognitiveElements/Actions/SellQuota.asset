@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb09768d8f35e84f982f572dc8a5313, type: 3}
+  m_Name: SellQuota
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  inFilter:
+  - {fileID: 11400000, guid: ad1cdeacb1aef9a428b8490de5338706, type: 2}
+  outFilter:
+  - {fileID: 11400000, guid: ad1cdeacb1aef9a428b8490de5338706, type: 2}
+  - {fileID: 11400000, guid: 90c464f88a631eb4f8d1b1089cde1f79, type: 2}
+  - {fileID: 11400000, guid: 505b11565e4cccf47991651a99125abe, type: 2}

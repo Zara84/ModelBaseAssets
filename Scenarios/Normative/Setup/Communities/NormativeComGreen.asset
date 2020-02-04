@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ce66427b4f6424f9d508e85bc4c935, type: 3}
+  m_Name: NormativeComGreen
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1330772348295925955, guid: fc5f03342118e7f46ae1b6f6e34082f3, type: 3}
+    - {fileID: 0}
+    - {fileID: 11400000, guid: 81fdc477f4ad5b14ea18a1ee828e8ab0, type: 2}
+    - {fileID: 11400000, guid: 5d8c778702f0edd40bc9a0928b1e6663, type: 2}
+    - {fileID: 11400000, guid: 5f9d8cf4ba372aa48a39ed9f57df9ccf, type: 2}
+    - {fileID: 11400000, guid: e98d27c657d5914479df1c3424100ba9, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: components
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[IComponent, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 9
+    - Name: 
+      Entry: 7
+      Data: 1|GeneralComponents.Prefab, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|GeneralComponents.SceneObject, Assembly-CSharp
+    - Name: gameObject
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Community.Population, Assembly-CSharp
+    - Name: population
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Vessels
+    - Name: list
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Harbors
+    - Name: list
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Workplaces
+    - Name: list
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Agents
+    - Name: list
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|GeneralComponents.ColorComponent, Assembly-CSharp
+    - Name: color
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.3647059
+    - Name: 
+      Entry: 4
+      Data: 0.6313726
+    - Name: 
+      Entry: 4
+      Data: 0.247058839
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|GeneralComponents.Position, Assembly-CSharp
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1.5
+    - Name: 
+      Entry: 4
+      Data: 9
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  entityName: NormativeComGreen
+  ID: 

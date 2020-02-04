@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ce66427b4f6424f9d508e85bc4c935, type: 3}
+  m_Name: NormVesselProfile
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 07a0ec8ad835e27409e3f7c9b4962660, type: 2}
+    - {fileID: 1250310518786127842, guid: 92b0397a398c58f4089605e5491750b5, type: 3}
+    - {fileID: 0}
+    - {fileID: 11400000, guid: f1c6ec5f1a0a44a4db6462cc168015b1, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: components
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[IComponent, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 1|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Harbor
+    - Name: list
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|GeneralComponents.Prefab, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|ResourceComponents.ResourceTileMap, Assembly-CSharp
+    - Name: map
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|GeneralComponents.Inventory, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: VesselProfile
+    - Name: list
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[mEntity, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  entityName: NormVesselProfile
+  ID: 
