@@ -17,9 +17,10 @@ public class VesselBehavior : BaseAgentBehavior
 
     public mEntity vesselProfile;
 
-   // public GoalReasoner reasoner;
+    // public GoalReasoner reasoner;
 
     public Tilemap resourceMap;
+
     public Vector3Int homeTileIndex;
     public Vector3Int currentTileIndex;
 
@@ -32,23 +33,23 @@ public class VesselBehavior : BaseAgentBehavior
     public float capacity = 0;
 
     public SimStep step;
-    
+
     public ResourceGrid grid;
 
     public float quota;
     public mEntity entCatch;
-    public mEntity test;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void startBoat()
@@ -57,22 +58,13 @@ public class VesselBehavior : BaseAgentBehavior
         homeTileIndex = resourceMap.WorldToCell(transform.position);
         grid = resourceMap.GetComponent<MarineResourceBehavior>().grid;
         // ResourceTile mostTile = grid.resourceTiles.ElementAt(UnityEngine.Random.Range(0, grid.resourceTiles.Count)).Value;
-        entities.GetComponent<Catch>(out entCatch);
+       // entities.GetComponent<Catch>(out entCatch);
         capacity = vesselProfile.getComponent<Capacity>().capacity;
 
-        mEntity resourceMapEntity = ScriptableObject.CreateInstance<mEntity>();
 
 
-        resourceMapEntity.entityName = "ResourceMap";
-        resourceMapEntity.name = "*" + resourceMapEntity.entityName;
-        ResourceTileMap mapComponent = new ResourceTileMap
-        {
-            map = resourceMap
-        };
-        resourceMapEntity.components.Add(mapComponent);
-        entities.Add(resourceMapEntity);
 
-        test = entities.getEntity(mapComponent);
+      //  test = entities.getEntity(mapComponent);
 
         StartCoroutine(reasoner.reasonCycle());
         StartCoroutine(reasoner.executionCycle());
@@ -90,7 +82,7 @@ public class VesselBehavior : BaseAgentBehavior
     {
         Debug.Log("... and it's done.");
         StartCoroutine("goHome");
-       // OnVesselReturns();
+        // OnVesselReturns();
     }
 
     public virtual void OnVesselReturns()
@@ -110,7 +102,7 @@ public class VesselBehavior : BaseAgentBehavior
 
         int stagger = UnityEngine.Random.Range(5, 30);
 
-        for(int i =0; i<stagger; i++)
+        for (int i = 0; i < stagger; i++)
         {
             yield return null;
         }
@@ -139,7 +131,7 @@ public class VesselBehavior : BaseAgentBehavior
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
             yield return null;
         }
-       // transform.position = new Vector3(tileIndex.x + UnityEngine.Random.Range(.1f, .9f), tileIndex.y + UnityEngine.Random.Range(.1f, .9f));
+        // transform.position = new Vector3(tileIndex.x + UnityEngine.Random.Range(.1f, .9f), tileIndex.y + UnityEngine.Random.Range(.1f, .9f));
 
         //Debug.Log("Boat at: " + "[" + tileIndex.x + ", " + tileIndex.y + "] /" + "[" + transform.position.x + ", " + transform.position.y + "]" );
     }
@@ -173,24 +165,24 @@ public class VesselBehavior : BaseAgentBehavior
                 */
 
         restoreGoalQueue();
-        
 
-        
-      //  Debug.Log("Going fishing...");
+
+
+        //  Debug.Log("Going fishing...");
         // start fishing trip
-      //  StartCoroutine("goFish");
+        //  StartCoroutine("goFish");
     }
 
     public void OnEndDay()
     {
 
-        if(entities.getEntity<Catch>().getComponent<isAvailable>() == null)
+        if (entities.getEntity<Catch>().getComponent<isAvailable>() == null)
             entities.getEntity<Catch>().components.Add(new isAvailable());
 
-        if(entities.getEntity<Catch>().getComponent<isAvailable>() != null)
+        if (entities.getEntity<Catch>().getComponent<isAvailable>() != null)
         {
             gameObject.transform.parent.GetComponent<AgentBehavior>().OnVesselReturns(ECUtils.DeepCopyEntity(entities.getEntity<Catch>()));
-            test = ECUtils.DeepCopyEntity(entities.getEntity<Catch>());
+           // test = ECUtils.DeepCopyEntity(entities.getEntity<Catch>());
 
             entities.getEntity<Profit>().getComponent<Profit>().profit += entities.getEntity<Catch>().getComponent<Catch>().size;
             entities.getEntity<Catch>().getComponent<Catch>().size = 0;
@@ -198,7 +190,7 @@ public class VesselBehavior : BaseAgentBehavior
         }
 
         Debug.Log("... and it's done.");
-      //  StartCoroutine("goHome");
+        //  StartCoroutine("goHome");
         // OnVesselReturns();
     }
 
@@ -208,5 +200,19 @@ public class VesselBehavior : BaseAgentBehavior
         {
             reasoner.resetGoalQueue();
         }
+    }
+    public void setMap(Tilemap resourceMap)
+    {
+        mEntity resourceMapEntity = ScriptableObject.CreateInstance<mEntity>();
+
+
+        resourceMapEntity.entityName = "ResourceMap";
+        resourceMapEntity.name = "*" + resourceMapEntity.entityName;
+        ResourceTileMap mapComponent = new ResourceTileMap
+        {
+            map = resourceMap
+        };
+        resourceMapEntity.components.Add(mapComponent);
+        entities.Add(resourceMapEntity);
     }
 }

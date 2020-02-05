@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8198d1c3af665b44b3f87a44370b29a, type: 3}
-  m_Name: NormReasoner
+  m_Name: VesselNormReasoner
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -46,12 +46,14 @@ MonoBehaviour:
       Entry: 8
       Data: 
   continuous: 0
+  activeGoal: {fileID: 0}
+  activeAction: {fileID: 0}
   owner: {fileID: 0}
   plan: {fileID: 11400000, guid: c1bf3cfc62e65aa49981fd9afedadb81, type: 2}
   refplan: {fileID: 0}
   entities: []
   goals: []
   actions: []
-  activeGoal: {fileID: 0}
-  activeAction: {fileID: 0}
-  norms: []
+  log: 
+  norms:
+  - {fileID: 11400000, guid: de2c9389b042d5f44a060fb918511498, type: 2}

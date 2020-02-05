@@ -27,9 +27,6 @@ public class GoalReasoner : PluggableReasoning
     public Queue<MGoal> qGoals = new Queue<MGoal>();
     public Queue<MAction> qActions = new Queue<MAction>();
 
-    public MGoal activeGoal;
-    public MAction activeAction;
-
     public string log ="";
 
     public override void init(BaseAgentBehavior owner)
@@ -39,6 +36,7 @@ public class GoalReasoner : PluggableReasoning
         //it needs to reason on data from the owner and return a decision to it
         this.owner = owner;
 
+        entities.Clear();
         foreach(mEntity e in owner.entities)
         {
             entities.Add(e);
@@ -96,41 +94,45 @@ public class GoalReasoner : PluggableReasoning
                         log = "";
                     }
                 }
-/*
-                if(qGoals.Count == 0)
-                {
-                    Debug.Log("Now actionable goal found. Reconsidering all goals for next reasoning cycle");
-                    foreach(MGoal g in goals)
-                    {
-                        qGoals.Enqueue(g);
-                    }
-                }
-                */
+                /*
+                                if(qGoals.Count == 0)
+                                {
+                                    Debug.Log("Now actionable goal found. Reconsidering all goals for next reasoning cycle");
+                                    foreach(MGoal g in goals)
+                                    {
+                                        qGoals.Enqueue(g);
+                                    }
+                                }
+                                */
             }
             else
             {
-                MGoal g = qGoals.Peek();
-
-                if (g.distance(owner) >= 0)
+                if (qGoals.Count >= 1)
                 {
-                    if (refplan.plan[g][0].isDoable(owner))
+                    MGoal g = qGoals.Peek();
+
+                    if (g.distance(owner) >= 0)
                     {
-                        activeGoal = g;
-                        log += "Set active goal " + g.ToString() + "; ";
+                        if (refplan.plan[g][0].isDoable(owner))
+                        {
+                            //this is where we check for norm compliance for norms that target goals
+                            activeGoal = g;
+                            log += "Set active goal " + g.ToString() + "; ";
+                        }
+                        else
+                        {
+                            Debug.Log("Droping goal " + g + ". Plan not feasible. Moved to back of queue ");
+                            log += "Droping goal " + g.ToString() + " . Plan not feasible. Moved to back of queue; ";
+                            qGoals.Dequeue();
+                            qGoals.Enqueue(g);
+                        }
                     }
                     else
                     {
-                        Debug.Log("Droping goal " + g + ". Plan not feasible. Moved to back of queue ");
-                        log += "Droping goal " + g.ToString() + " . Plan not feasible. Moved to back of queue; ";
+                        Debug.Log("Goal " + g.ToString() + " is fulfiled. Moving to end of queue");
                         qGoals.Dequeue();
                         qGoals.Enqueue(g);
                     }
-                }
-                else
-                {
-                    Debug.Log("Goal " + g.ToString() +" is fulfiled. Moving to end of queue");
-                    qGoals.Dequeue();
-                    qGoals.Enqueue(g);
                 }
             }
         }
@@ -158,6 +160,7 @@ public class GoalReasoner : PluggableReasoning
         }
     }
 
+    
     public override void executePlan()
     {
         Debug.Log("Executing plan");
@@ -201,6 +204,11 @@ public class GoalReasoner : PluggableReasoning
         }
     }
 
+    //this always needs to be a coroutine because some of the actions are/have coroutines
+    //it's because i don't want my simulation tied to frames, but to time, so i can use multiple-frame actions like
+    //movement and animations. And also because i can use frames to stagger agents so they don't cause artifacts
+    //cause execution order is fixed and all the agents are actually on a single thread 
+
     public override IEnumerator executionCycle()
     {
         Debug.Log("Started execution");
@@ -217,6 +225,7 @@ public class GoalReasoner : PluggableReasoning
 
     public override void resetGoalQueue()
     {
+        Debug.Log(log);
         log = "";
         qGoals.Clear();
         foreach(MGoal g in goals)

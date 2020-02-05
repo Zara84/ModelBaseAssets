@@ -5,6 +5,8 @@ using UnityEngine;
 public class PluggableReasoning : PluggableBehaviorBase
 {
     public bool continuous = false;
+    public MGoal activeGoal;
+    public MAction activeAction;
 
     public virtual void init(BaseAgentBehavior owner)
     {

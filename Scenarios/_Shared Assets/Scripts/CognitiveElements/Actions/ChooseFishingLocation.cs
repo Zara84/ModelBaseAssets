@@ -35,6 +35,10 @@ public class ChooseFishingLocation : MAction
 
     public override void execute(BaseAgentBehavior owner)
     {
+        if (map == null)
+        {
+            map = ((VesselBehavior)owner).resourceMap;
+        }
         ResourceGrid grid = map.GetComponent<MarineResourceBehavior>().grid;
 
         ResourceTile mostTile = grid.resourceTiles.ElementAt(UnityEngine.Random.Range(0, grid.resourceTiles.Count)).Value;

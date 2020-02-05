@@ -34,6 +34,8 @@ public class ScenarioManager : SerializedMonoBehaviour
     public BaseQuota quota;
     public mEntity quotaEntity;
 
+    public int runLength;
+
     #region Events
     public delegate void BeginDayEventHandler(object source, EventArgs args);
     public event BeginDayEventHandler BeginDay;
@@ -43,6 +45,10 @@ public class ScenarioManager : SerializedMonoBehaviour
 
     public delegate void UpdateResourceEventHandler(object source, EventArgs args);
     public event UpdateResourceEventHandler UpdateResource;
+
+    //kill all generated objects and reset the resource
+    public delegate void EndRunEventHandler(object source, EventArgs args);
+    public event EndRunEventHandler EndRun;
     #endregion
 
     #region RaiseEvents
@@ -69,6 +75,14 @@ public class ScenarioManager : SerializedMonoBehaviour
             UpdateResource(this, EventArgs.Empty);
         }
     }
+
+    public virtual void OnEndRun()
+    {
+        if(EndRun != null)
+        {
+            EndRun(this, EventArgs.Empty);
+        }
+    }
     #endregion
 
     // Start is called before the first frame update
@@ -76,11 +90,9 @@ public class ScenarioManager : SerializedMonoBehaviour
     {
            initResource();
            initCommunities();
-
-        quota = test.GetComponent<BaseQuota>(out quotaEntity);
+       // quota = test.GetComponent<BaseQuota>(out quotaEntity);
       //  test.GetComponent<BaseQuota>(out quotaEntity);
        // Debug.Log(test.GetComponent<BaseQuota>());
-
     }
     #region Initializers
 
@@ -250,13 +262,14 @@ public class ScenarioManager : SerializedMonoBehaviour
 
         vesselGO.transform.parent = agent.transform;
 
-        
 
-       // BeginDay += vesselGO.GetComponent<VesselBehavior>().OnBeginDay;
 
-       // EndDay += vesselGO.GetComponent<VesselBehavior>().OnEndDay;
+        // BeginDay += vesselGO.GetComponent<VesselBehavior>().OnBeginDay;
 
-       // vesselGO.GetComponent<VesselBehavior>().profile = vesselProfile;
+        // EndDay += vesselGO.GetComponent<VesselBehavior>().OnEndDay;
+
+        // vesselGO.GetComponent<VesselBehavior>().profile = vesselProfile;
+        vesselGO.GetComponent<VesselBehavior>().setMap(resourceMap);
         vesselGO.GetComponent<VesselBehavior>().loadProfile(vesselGO.GetComponent<VesselBehavior>().vesselProfile);
         vesselGO.GetComponent<VesselBehavior>().startBoat();
     }
@@ -265,6 +278,11 @@ public class ScenarioManager : SerializedMonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.anyKeyDown)
+        {
+            Debug.Log("You pressed a key");
+        }
+
         if (cycle)
             StartCoroutine("Step");
     }
@@ -288,5 +306,12 @@ public class ScenarioManager : SerializedMonoBehaviour
         cycle = true;
     }
 
-    
+    //maybe move to another script
+    //batch run kind of setup
+    public void startNextRun()
+    {
+
+    }
+
+
 }

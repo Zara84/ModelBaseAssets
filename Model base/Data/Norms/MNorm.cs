@@ -25,6 +25,7 @@ public abstract class MNorm : SerializedScriptableObject
     {
         this.owner = owner;
 
+        cachedContext.Clear();
         foreach(mEntity ent in context)
         {
             cachedContext.Add(ECUtils.getMatchingEntity(ent, owner.entities));

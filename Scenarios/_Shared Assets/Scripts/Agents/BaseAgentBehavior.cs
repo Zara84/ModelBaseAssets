@@ -106,15 +106,17 @@ public class BaseAgentBehavior : SerializedMonoBehaviour
             norms.Add(n);
         }
 
+        initReasoner(reasonerTemplate);
+    }
+
+    public void initReasoner(PluggableReasoning reasonerTemplate)
+    {
         if (reasonerTemplate != null)
         {
             reasoner = Activator.CreateInstance(reasonerTemplate.GetType()) as PluggableReasoning;
-            
+
             reasoner.init(this);
-
-          //  reasoner.setActiveGoal();
+            //  reasoner.setActiveGoal();
         }
-
-        
     }
 }

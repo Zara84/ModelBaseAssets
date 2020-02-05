@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ce66427b4f6424f9d508e85bc4c935, type: 3}
-  m_Name: ITQ
+  m_Script: {fileID: 11500000, guid: d8198d1c3af665b44b3f87a44370b29a, type: 3}
+  m_Name: AgentNormReasoner
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,38 +21,39 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: components
+    - Name: qGoals
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[IComponent, Assembly-CSharp]], mscorlib
+      Data: 0|System.Collections.Generic.Queue`1[[MGoal, Assembly-CSharp]], System
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|VesselComponents.BaseQuota, Assembly-CSharp
-    - Name: quota
-      Entry: 4
-      Data: 10
-    - Name: species
-      Entry: 1
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|GeneralComponents.Cost, Assembly-CSharp
-    - Name: cost
-      Entry: 4
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  entityName: ITQ
-  ID: 
+    - Name: qActions
+      Entry: 7
+      Data: 1|System.Collections.Generic.Queue`1[[MAction, Assembly-CSharp]], System
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  continuous: 0
+  activeGoal: {fileID: 0}
+  activeAction: {fileID: 0}
+  owner: {fileID: 0}
+  plan: {fileID: 11400000, guid: 6212b85a4068e1a468e344df2847248e, type: 2}
+  refplan: {fileID: 0}
+  entities: []
+  goals: []
+  actions: []
+  log: 
+  norms:
+  - {fileID: 11400000, guid: 9bb262451648ca34293d529ecfd4ffaf, type: 2}
