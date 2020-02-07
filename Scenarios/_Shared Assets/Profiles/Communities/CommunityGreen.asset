@@ -9,19 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ce66427b4f6424f9d508e85bc4c935, type: 3}
-  m_Name: NormativeComBlue
+  m_Script: {fileID: 11500000, guid: 1eb9724dea622794eb5934af39bf3177, type: 3}
+  m_Name: CommunityGreen
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1330772348295925955, guid: fc5f03342118e7f46ae1b6f6e34082f3, type: 3}
-    - {fileID: 0}
     - {fileID: 11400000, guid: 81fdc477f4ad5b14ea18a1ee828e8ab0, type: 2}
-    - {fileID: 11400000, guid: ceed0e7556de7894684eea4aeccb331d, type: 2}
-    - {fileID: 11400000, guid: 0f6dd018fced99c46933743bef7fc67e, type: 2}
-    - {fileID: 11400000, guid: 3c3d6d3a9a58e3c458221e05ff1ab391, type: 2}
+    - {fileID: 11400000, guid: 5d8c778702f0edd40bc9a0928b1e6663, type: 2}
+    - {fileID: 11400000, guid: 5f9d8cf4ba372aa48a39ed9f57df9ccf, type: 2}
+    - {fileID: 11400000, guid: e9a0ef613e9f3c94cac6eed8605f2254, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -46,8 +45,8 @@ MonoBehaviour:
       Entry: 7
       Data: 2|GeneralComponents.SceneObject, Assembly-CSharp
     - Name: gameObject
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -74,7 +73,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 13
       Data: 
@@ -98,7 +97,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 10
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 13
       Data: 
@@ -122,7 +121,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 10
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 13
       Data: 
@@ -146,7 +145,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 10
-      Data: 5
+      Data: 4
     - Name: 
       Entry: 13
       Data: 
@@ -164,13 +163,13 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0.549019635
+      Data: 0.3647059
     - Name: 
       Entry: 4
-      Data: 0.8470589
+      Data: 0.6313726
     - Name: 
       Entry: 4
-      Data: 1
+      Data: 0.247058839
     - Name: 
       Entry: 4
       Data: 1
@@ -188,10 +187,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 12.5
+      Data: 1.5
     - Name: 
       Entry: 4
-      Data: 2
+      Data: 9
     - Name: 
       Entry: 4
       Data: 0
@@ -207,5 +206,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  entityName: NormativeComBlue
+  entityName: CommunityGreen
   ID: 

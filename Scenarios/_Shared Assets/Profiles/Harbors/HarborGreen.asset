@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ce66427b4f6424f9d508e85bc4c935, type: 3}
-  m_Name: HarborProfileBlue
+  m_Script: {fileID: 11500000, guid: 1eb9724dea622794eb5934af39bf3177, type: 3}
+  m_Name: HarborGreen
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1027527883969849901, guid: fae488b59897b6342b898db4f460a31b, type: 3}
+    - {fileID: 11400000, guid: 4c2417de13777a547a1fd498afa760bf, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -50,8 +51,8 @@ MonoBehaviour:
       Entry: 7
       Data: 3|Community.CommunityProfile, Assembly-CSharp
     - Name: profile
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -72,10 +73,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 12.5
+      Data: 2.5
     - Name: 
       Entry: 4
-      Data: 3
+      Data: 9
     - Name: 
       Entry: 4
       Data: 0
@@ -91,5 +92,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  entityName: HarborProfile
+  entityName: HarborGreen
   ID: 

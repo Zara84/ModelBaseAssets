@@ -49,7 +49,15 @@ public class VesselBehavior : BaseAgentBehavior
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.anyKeyDown)
+        {
+            Debug.Log("Restarting reasoner...");
+            reasoner = new GoalReasoner();
+            reasoner.init(this);
+            StartCoroutine(reasoner.reasonCycle());
+            StartCoroutine(reasoner.executionCycle());
+            Debug.Log("Reasoner restarted.");
+        }
     }
 
     public void startBoat()

@@ -68,9 +68,11 @@ namespace GeneralComponents
         public float repaymentRate = 0;
     }
 
+    // [InlineEditor(ObjectFieldMode =InlineEditorObjectFieldModes.Hidden)]
     public class Inventory : IComponent
     {
         public string name;
+        [AssetSelector(Paths = "Assets/Scenarios/_Shared Assets/Archetypes")]
         public List<mEntity> list = new List<mEntity>();
     }
 

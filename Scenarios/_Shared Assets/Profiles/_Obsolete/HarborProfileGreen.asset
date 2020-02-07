@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1027527883969849901, guid: fae488b59897b6342b898db4f460a31b, type: 3}
+    - {fileID: 11400000, guid: 4c2417de13777a547a1fd498afa760bf, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -50,8 +51,8 @@ MonoBehaviour:
       Entry: 7
       Data: 3|Community.CommunityProfile, Assembly-CSharp
     - Name: profile
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

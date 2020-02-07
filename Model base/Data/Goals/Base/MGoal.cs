@@ -16,10 +16,12 @@ public abstract class MGoal : SerializedScriptableObject
     //  [InfoBox("These are the goal's reference entities used to determine fulfilled/unfilfilled condition. " +
     //      "The actual entities in the simulation are cached from the owner.")]
     [ValidateInput("EntityMatchesGoal", "Some of the required components are missing from filter entities")]
+    [AssetSelector(Paths = "Assets/Scenarios/_Shared Assets/Archetypes")]
     public List<mEntity> filter = new List<mEntity>();
 
     [VerticalGroup("Filter/Cached")]
     [Title("Cached")]
+    [ListDrawerSettings(HideAddButton = true)]
     public List<mEntity> cachedFilter = new List<mEntity>();
 
     [HorizontalGroup("Actions")]

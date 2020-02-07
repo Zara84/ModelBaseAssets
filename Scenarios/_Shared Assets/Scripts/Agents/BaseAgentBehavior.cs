@@ -25,8 +25,14 @@ public class BaseAgentBehavior : SerializedMonoBehaviour
 
     public List<GameObject> vessels = new List<GameObject>();
 
+    [OnValueChanged("reasonerChanged")]
     public PluggableReasoning reasonerTemplate;
     public PluggableReasoning reasoner;
+
+    public void reasonerChanged()
+    {
+        Debug.Log("Would you look at that. The reasoner changed.");
+    }
 
     [Button("Load profile")]
     public virtual void loadProfile(mEntity profile)

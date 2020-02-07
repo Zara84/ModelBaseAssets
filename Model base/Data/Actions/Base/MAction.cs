@@ -13,6 +13,7 @@ using ResourceComponents;
 public abstract class MAction : SerializedScriptableObject
 {
     [Title("Owner")]
+    [DisableInEditorMode]
     public BaseAgentBehavior owner;
     
   //  [TitleGroup("Precondition filters")]
@@ -20,20 +21,24 @@ public abstract class MAction : SerializedScriptableObject
     [VerticalGroup("Pre/Reference")]
     [Title("Reference Preconditions")]
     [ValidateInput("EntityMatchesAction")]
+    [AssetSelector(Paths = "Assets/Scenarios/_Shared Assets/Archetypes")]
     public List<mEntity> inFilter = new List<mEntity>();
 
     [VerticalGroup("Pre/Cached")]
     [Title("Cached Preconditions")]
+    [ListDrawerSettings(HideAddButton = true), DisableInEditorMode]
     public List<mEntity> cachedInFilter = new List<mEntity>();
 
     [HorizontalGroup("Post")]
     //[ValidateInput("EntityMatchesEffects")]
     [VerticalGroup("Post/Reference")]
     [Title("Reference effects")]
+    [AssetSelector(Paths = "Assets/Scenarios/_Shared Assets/Archetypes")]
     public List<mEntity> outFilter = new List<mEntity>();
 
     [VerticalGroup("Post/Cached")]
     [Title("Cached effects")]
+    [ListDrawerSettings(HideAddButton = true), DisableInEditorMode]
     [PropertyTooltip("Cached effects is a bit weird. Want to use it for storing simulated action results maybe. Will see. But the tooltip is cool.")]
     public List<mEntity> cachedOutFilter = new List<mEntity>();
 

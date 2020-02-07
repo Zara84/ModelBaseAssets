@@ -51,7 +51,8 @@ MonoBehaviour:
   owner: {fileID: 0}
   plan: {fileID: 11400000, guid: c1bf3cfc62e65aa49981fd9afedadb81, type: 2}
   refplan: {fileID: 0}
-  entities: []
+  entities:
+  - {fileID: 0}
   goals: []
   actions: []
   log: 

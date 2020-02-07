@@ -19,6 +19,8 @@ public class mEntity : SerializedScriptableObject
 
     // overload indexer
 
+   // [InlineEditor(ObjectFieldMode = InlineEditorObjectFieldModes.Hidden)]
+   // [AssetSelector]
     public List<IComponent> components = new List<IComponent>();
 
     public IComponent this[Type i] 
@@ -58,6 +60,7 @@ public class mEntity : SerializedScriptableObject
         }
 
         AssetDatabase.SaveAssets();
+        //AssetDatabase.SetLabels();
     }
 
     public bool Contains(mEntity e)

@@ -43,7 +43,14 @@ public class AgentBehavior : BaseAgentBehavior
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.anyKeyDown)
+        {
+            Debug.Log("Restarting reasoner...");
+            reasoner = new SimpleNormReasoner();
+            reasoner.init(this);
+            startAgent();
+            Debug.Log("Reasoner restarted.");
+        }
     }
 
     void updateBeliefs()

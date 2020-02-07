@@ -124,8 +124,8 @@ public class AssetMaker : OdinEditorWindow
 
         mEntity asset = CreateInstance<mEntity>();
         AssetDatabase.CreateAsset(asset, path + "/" + "New Entity" + ".asset");
-
         AssetDatabase.SaveAssets();
+        AssetDatabase.SetLabels(asset, new string[] { "Entity" });
         EditorUtility.FocusProjectWindow();
         Selection.activeObject = asset;
     }

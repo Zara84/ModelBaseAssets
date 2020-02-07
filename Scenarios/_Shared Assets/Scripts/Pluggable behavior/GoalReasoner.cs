@@ -131,7 +131,7 @@ public class GoalReasoner : PluggableReasoning
                     {
                         Debug.Log("Goal " + g.ToString() + " is fulfiled. Moving to end of queue");
                         qGoals.Dequeue();
-                        qGoals.Enqueue(g);
+                      //  qGoals.Enqueue(g);
                     }
                 }
             }
